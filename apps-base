@@ -1,0 +1,9 @@
+#!/bin/bash
+/usr/bin/google-chrome-stable %U &
+sleep 2
+wmctrl -r :ACTIVE: -e '0,1920,64,1920,1160' # format: gravity,x,y,width,height
+#wmctrl -r :ACTIVE: -t 0
+sleep 2
+/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=ferdium --file-forwarding org.ferdium.Ferdium @@u %U @@
+wmctrl -r Ferdium -e '0,3840,32,1200,1296' # format: gravity,x,y,width,height
+wmctrl -r "Ferdium" -b add,sticky

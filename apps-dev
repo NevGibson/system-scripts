@@ -1,0 +1,13 @@
+#!/bin/bash
+firefox &
+sleep 2
+wmctrl -r :ACTIVE: -e '0,557,0,1373,1200' # format: gravity,x,y,width,height
+wmctrl -r :ACTIVE: -t 1
+/home/nev/Applications/PhpStorm-253.29346.151/bin/phpstorm &
+sleep 2
+wmctrl -r :ACTIVE: -e '0,1920,64,1920,1160' # format: gravity,x,y,width,height
+wmctrl -r :ACTIVE: -t 1
+/home/nev/Applications/Ray-2.8.1.AppImage &
+sleep 2
+wmctrl -r Ray -e '0,0,0,548,1200' # format: gravity,x,y,width,height
+wmctrl -r Ray -t 1

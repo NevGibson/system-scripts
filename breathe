@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /src/live/www
+let seconds=60*$1
+sudo rtcwake -m mem -s $seconds
